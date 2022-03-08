@@ -20,12 +20,12 @@ function App() {
 
     if (!name) {
       // display the alert
-
       showAlert(true, 'danger', 'please enter a value')
     } else if (name && isEditing) {
       // handle edit
     } else {
       // show alert
+      showAlert(true, 'success', 'item added to the list')
       const newItem = { id: uuidv4(), title: name }
       setList([...list, newItem])
       console.log(list)
@@ -35,6 +35,11 @@ function App() {
 
   const showAlert = (show = false, type = '', msg = '') => {
     setAlert({ show, type, msg })
+  }
+
+  const clearList = () => {
+    showAlert(true, 'success', 'all items have been deleted')
+    setList([])
   }
 
   return (
@@ -63,7 +68,9 @@ function App() {
         list.length > 0 && (
           <div className="grocery-container">
             <List items={list} />
-            <button className="clear-btn">clear items</button>
+            <button className="clear-btn" onClick={clearList}>
+              clear items
+            </button>
           </div>
         )
       }
