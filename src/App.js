@@ -23,6 +23,19 @@ function App() {
       showAlert(true, 'danger', 'please enter a value')
     } else if (name && isEditing) {
       // handle edit
+      setList(
+        list.map((item) => {
+          if (item.id === editID) {
+            return { ...item, title: name }
+          }
+          return item
+        })
+      )
+
+      setName('')
+      setIsEditing(false)
+      setEditID(null)
+      showAlert(true, 'success', 'item has been updated.')
     } else {
       // show alert
       showAlert(true, 'success', 'item added to the list')
@@ -45,6 +58,13 @@ function App() {
   const removeItem = (id) => {
     showAlert(true, 'success', 'your item has been deleted')
     setList(list.filter((item) => item.id !== id))
+  }
+
+  const editItem = (id) => {
+    const itemToEdit = list.find((item) => item.id === id)
+    setIsEditing(true)
+    setEditID(id)
+    setName(itemToEdit.title)
   }
 
   return (
@@ -72,7 +92,7 @@ function App() {
 
         list.length > 0 && (
           <div className="grocery-container">
-            <List items={list} removeItem={removeItem} />
+            <List items={list} removeItem={removeItem} editItem={editItem} />
             <button className="clear-btn" onClick={clearList}>
               clear items
             </button>
