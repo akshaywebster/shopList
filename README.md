@@ -14,6 +14,9 @@ A Shopping List app with local storage - built in React.
 - JavaScript
 - React.js ⚛️
 
+<p align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="36" height="36" alt="HTML5" /><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="36" height="36" alt="CSS3" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="36" height="36" alt="Javascript" /></a></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="36" height="36" alt="React" /></a></p>
+
 ### What I learned
 
 In this project, I continued my learnings with handling forms in React. It's a pretty simple app but the functionality has been tough to figure out. I had to manage a lot of state variables to make all the component & functionality work.
@@ -26,7 +29,7 @@ There were a lot of roadbloacks while working on this project, most about what s
 
 ### Demo
 
-- [Demo](https://webster-shoplist-app.netlify.app/)
+[Demo](https://webster-shoplist-app.netlify.app/)
 
 ### Screenshot:
 
